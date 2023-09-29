@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+   background-color: #140d4a;
+}
+
+.container{
+    max-width: 500px;
+    margin-top: 50px;
+}
+
+.title{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    font-family: cursive;
+}
+
+.header{
+    margin: 30px 0 20px;
+    display: flex;
+}
+
+.header input{
+    height: 42px;
+    padding: 10px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    font-family: cursive;
+}
+
+.header button{
+    font-size: 18px;
+    height: 42px;
+    padding: 0 20px;
+    cursor: pointer;
+    background-color: rgb(114, 6, 94);
+    color: white;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+    font-family: cursive;
+    
+}
+
+.header button:hover{
+    background-color: rgba(255, 0, 191, 0.8);
+}
+
+.todolist{
+    text-align: left;
+    list-style: none;
+    perspective: 1000px;
+}
+
+.todolist li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(114, 6, 94);
+    padding: 10px 15px;
+    margin: 4px 0;  
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    animation: 0.3s ease-in-out;
+    border-radius: 9px;
+    
+}
+
+.fa-trash, .fa-edit{
+    cursor: pointer;
+    background-color: white;
+    padding: 6px 10px;
+    border-radius: 7px;
+    text-align: center;
+    margin-top: 3px;
+    color: #332d2d;
+}
+
+.fa-trash{
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+/* Animate in */
+@keyframes slideIn{
+    from{
+        opacity: 0;
+        transform: rotateX(60deg) translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform:rotateX(0deg) translateY(0px);
+    }
+}
+
+/* Animate out */
+.slideOut{
+    transform: rotateX(60deg) translateY(-10px);
+    opacity: 0;
+    transition: 1s;
+}
+
